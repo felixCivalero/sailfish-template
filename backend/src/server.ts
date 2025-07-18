@@ -13,6 +13,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+console.log(process.env.SUPABASE_URL);
+
 app.use("/api/auth", authRoutes);
 
 const PORT = process.env.PORT || 3001;
